@@ -8,6 +8,7 @@ else
     echo "dotfiles already exist"
     cd $dotfiles && git pull
 fi
+
 cd $dotfiles && git submodule init
 cd $dotfiles && git submodule update
 
@@ -17,8 +18,8 @@ for f in $dotfiles/.??*; do
     [[ "$(basename $f)" == ".gitmodules" ]] && continue
     [[ "$(basename $f)" == ".DS_Store" ]] && continue
 
-    if [ ! -e $HOME/$f ] ; then
-        ln -nsfF $dotfiles/$(basename $f) $HOME/$(basename $f)
+    if [ ! -e $HOME/$(basename $f) ] ; then
+        ln -ns $dotfiles/$(basename $f) $HOME/$(basename $f)
     fi
 done
 
@@ -26,7 +27,7 @@ done
 for rcfile in $dotfiles/.zprezto/runcoms/??*; do
     [[ "$(basename $rcfile)" == "README.md" ]] && continue
 
-    if [ ! -e $HOME/.$rcfile ] ; then
+    if [ ! -e $HOME/.$(basename $rcfile) ] ; then
         ln -ns $rcfile $HOME/.$(basename $rcfile)
     fi
 done
