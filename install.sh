@@ -8,8 +8,8 @@ else
     echo "dotfiles already exist"
     cd $dotfiles && git pull
 fi
-git submodule init
-git submodule update
+cd $dotfiles && git submodule init
+cd $dotfiles && git submodule update
 
 # dotfiles
 for f in $dotfiles/.??*; do
