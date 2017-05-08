@@ -1,0 +1,63 @@
+zstyle ':prezto:*:*' color 'yes'
+# zstyle ':prezto:load' zmodule 'attr' 'stat'
+# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'git' \
+  'prompt' \
+  'tmux'
+
+# zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+# zstyle ':prezto:module:editor' ps-context 'yes'
+# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+# zstyle ':prezto:module:gnu-utility' prefix 'g'
+zstyle ':prezto:module:history-substring-search:color' found ''
+zstyle ':prezto:module:history-substring-search:color' not-found ''
+# zstyle ':prezto:module:history-substring-search' globbing-flags ''
+# zstyle ':prezto:module:pacman' frontend 'yaourt'
+
+zstyle ':prezto:module:prompt' theme 'damoekri'
+# zstyle ':prezto:module:prompt' theme 'hayamin'
+
+zstyle ':prezto:module:prompt' pwd-length 'short'
+
+# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+# zstyle ':prezto:module:screen:auto-start' local 'yes'
+# zstyle ':prezto:module:screen:auto-start' remote 'yes'
+# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+# zstyle ':prezto:module:syntax-highlighting' highlighters \
+#   'main' \
+#   'brackets' \
+#   'pattern' \
+#   'line' \
+#   'cursor' \
+#   'root'
+# zstyle ':prezto:module:syntax-highlighting' styles \
+#   'builtin' 'bg=blue' \
+#   'command' 'bg=blue' \
+#   'function' 'bg=blue'
+# zstyle ':prezto:module:syntax-highlighting' pattern \
+#   'rm*-rf*' 'fg=white,bold,bg=red'
+
+zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
+
+# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+# zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
+# zstyle ':prezto:module:tmux:session' name 'tmux'
