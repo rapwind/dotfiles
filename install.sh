@@ -4,11 +4,11 @@ dotfiles="$HOME/.dotfiles"
 if [ ! -e $dotfiles/.git ]; then
     echo "not found dotfiles"
     git clone https://github.com/rapwind/dotfiles.git $dotfiles
-    git submodule init
 else
     echo "dotfiles already exist"
     cd $dotfiles && git pull
 fi
+git submodule init
 git submodule update
 
 # dotfiles
