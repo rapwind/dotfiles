@@ -24,6 +24,8 @@ for f in $dotfiles/.??*; do
 done
 
 # prezto
+cd $dotfiles/.zprezto && git submodule init
+cd $dotfiles/.zprezto && git submodule update
 for rcfile in $dotfiles/.zprezto/runcoms/??*; do
     [[ "$(basename $rcfile)" == "README.md" ]] && continue
 
