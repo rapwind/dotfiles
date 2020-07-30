@@ -77,7 +77,7 @@ function prompt_hayamin_precmd {
   prompt_hayamin_pwd
 
   # Define prompts.
-  RPROMPT='${editor_info[overwrite]}%(?:: %F{1}⏎%f)${VIM:+" %B%F{6}V%f%b"}'
+  RPROMPT='${editor_info[overwrite]}%(?:: %F{1}%f)${VIM:+" %B%F{6}V%f%b"}'
 
   # Kill the old process of slow commands if it is still running.
   if (( _prompt_hayamin_precmd_async_pid > 0 )); then
